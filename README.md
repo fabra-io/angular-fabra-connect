@@ -12,6 +12,4 @@ The built package is in `./dist/fabra-connect`.
 
 ## Use Fabra
 
-* Add `FabraConnectModule` to `imports` in `@NgModule`.
-* Inject `FabraConnectService` and call `FabraConnectService.initialize()`.
-
+See the README in `./projects/fabra-connect`

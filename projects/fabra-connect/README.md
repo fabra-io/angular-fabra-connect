@@ -1,11 +1,52 @@
-# FabraConnect
+# AngularFabraConnect
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+## Getting Started
 
-## Code scaffolding
+1. Run `npm install @fabra/angular-fabra-connect`
 
-Run `ng generate component component-name --project fabra-connect` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project fabra-connect`.
-> Note: Don't forget to add `--project fabra-connect` or else it will be added to the default project in your `angular.json` file. 
+2. In your root `app.module.ts`, add:
+
+```
+import { FabraConnectModule } from "@fabra/angular-fabra-connect";
+
+
+@NgModule({
+  ...
+  imports: [
+    FabraConnectModule, ...
+  ],
+  ...
+})
+```
+
+3. In the `<yourComponent>.component.ts` file of the component where you want to open Fabra Connect, add:
+
+```
+import { FabraConnectService } from "@fabra/angular-fabra-connect";
+
+export class FabraComponent implements OnInit {
+  linkToken: string = "";
+
+  constructor(private fabraConnectService: FabraConnectService) { }
+
+  ngOnInit() {
+    this.fabraConnectService.initialize();
+    this.linkToken = "TEGg9rC3qu3aBPQypyShF9aVaVjZbc2JFpMxDltXEFY=";
+  }
+
+  onButtonClick() {
+    this.fabraConnectService.open(this.linkToken);
+  }
+}
+```
+
+4. In the `<yourComponent>.component.html` file of the component where you want to open Fabra Connect:
+
+```
+<button (click)="onButtonClick()" class="button">Open Fabra Connect</button>
+```
+
+5. Import your component and use it to open Fabra Connect!
 
 ## Build
 
