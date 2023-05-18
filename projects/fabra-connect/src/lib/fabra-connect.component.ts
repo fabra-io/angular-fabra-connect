@@ -1,15 +1,8 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'lib-fabra-connect',
-  template: `
-    <p>
-      fabra-connect works!
-    </p>
-  `,
-  styles: [
-  ]
+  selector: "fabra-connect",
+  template: ``,
+  styles: [],
 })
-export class FabraConnectComponent {
-
-}
+export class FabraConnectComponent {}
