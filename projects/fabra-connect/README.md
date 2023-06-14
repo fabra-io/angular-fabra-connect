@@ -31,7 +31,7 @@ export class FabraComponent implements OnInit {
 
   ngOnInit() {
     this.fabraConnectService.initialize();
-    this.linkToken = "TEGg9rC3qu3aBPQypyShF9aVaVjZbc2JFpMxDltXEFY=";
+    this.linkToken = "YOUR_GENERATED_LINK_TOKEN";
   }
 
   onButtonClick() {
